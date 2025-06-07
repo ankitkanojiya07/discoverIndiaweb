@@ -6,7 +6,7 @@ const GalleryPreview: React.FC = () => {
   const previewImages = [
     {
       id: 1,
-      image: 'https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg',
+      image: './h2.jpg',
       title: 'Mountain',
       category: 'Nature'
     },
@@ -18,9 +18,9 @@ const GalleryPreview: React.FC = () => {
     },
     {
       id: 3,
-      image: 'https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg',
+      image: './8.jpg',
       title: 'Legacy',
-      category: 'History'
+      category: 'wildlife'
     }
   ];
 

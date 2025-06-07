@@ -31,7 +31,7 @@ const experiences: Experience[] = [
     id: 3,
     title: 'Tiger\'s Nest Spiritual Journey',
     category: 'Bhutan',
-    image: 'https://images.pexels.com/photos/5282557/pexels-photo-5282557.jpeg',
+    image: 'https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg',
     description: 'Hike to the iconic monastery and experience Bhutanese Buddhist traditions.',
     country: 'Bhutan'
   },

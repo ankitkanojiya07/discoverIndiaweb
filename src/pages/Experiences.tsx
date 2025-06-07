@@ -28,12 +28,12 @@ const experiencesData = {
       {
         title: 'Kerala Backwater Heritage',
         category: 'Nature & Culture',
-        image: 'https://images.pexels.com/photos/1310740/pexels-photo-1310740.jpeg',
+        image: 'https://images.pexels.com/photos/210186/pexels-photo-210186.jpeg',
         description: 'Luxury houseboat journey through serene backwaters with cultural immersion.',
         duration: '3-4 days',
         groupSize: '2-10 people',
         rating: 4.9
-      },
+      },      
       {
         title: 'Rajasthani Culinary Experience',
         category: 'Culinary Arts',

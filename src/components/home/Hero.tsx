@@ -18,9 +18,9 @@ const slides: Slide[] = [
   // },
   {
     id: 2,
-    image: 'https://images.pexels.com/photos/6143369/pexels-photo-6143369.jpeg',
-    title: 'Unveil Hidden Treasures',
-    subtitle: 'Discover architectural marvels and spiritual sanctuaries',
+    image: './h1.jpg',
+    title: 'Enough for your city life It is time to travel',
+    subtitle: '',
   },
   // {
   //   id: 3,
@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
       <div className="relative h-full flex items-center">
         <div className="container-custom">
           <div className="max-w-3xl fade-in" style={{ animationDelay: '0.5s' }}>
-            <h2 className="section-subtitle text-white">Discover Culture India</h2>
+            {/* <h2 className="section-subtitle text-white">Discover Culture India</h2> */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-6">
               {slides[currentSlide].title}
             </h1>

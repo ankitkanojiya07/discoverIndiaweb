@@ -2,10 +2,10 @@ import React from 'react';
 
 const Contact: React.FC = () => {
   return (
-    <section className="py-24 bg-accent-50">
+    <section className="py-24 bg-accent-50 relative overflow-hidden">
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="slide-up">
+          <div className="slide-up relative z-10">
             <h2 className="section-subtitle">Begin Your Journey</h2>
             <h3 className="section-title">Plan Your Cultural Experience</h3>
             <p className="text-primary-700 mt-4 mb-8 leading-relaxed">
@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
               begin planning your immersive cultural experience in India.
             </p>
             
-            <div className="bg-white p-8 border border-primary-200">
+            <div className="bg-white p-8 border border-primary-200 rounded-lg shadow-sm">
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -77,11 +77,36 @@ const Contact: React.FC = () => {
             </div>
           </div>
           
-          <div className="fade-in">
-            <img
-              src="https://images.pexels.com/photos/16052723/pexels-photo-16052723.jpeg"
-              alt="Luxury cultural experience"
-              className="w-full h-full object-cover"
+          <div className="relative h-[600px] overflow-hidden">
+            {/* First Image - Bottom Layer */}
+            <div className="absolute inset-0">
+              {/* <img
+                src="/1.jpg"
+                alt="Cultural experience background"
+                className="w-full h-full object-cover"
+              /> */}
+            </div>
+
+            {/* Second Image - Top Layer with Diagonal Clip */}
+            <div 
+              className="absolute inset-0 transform"
+              style={{
+                clipPath: 'polygon(0 0, 100% 0, 60% 100%, 0 100%)',
+              }}
+            >
+              <img
+                src="/c.jpg"
+                alt="Luxury cultural experience"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Add subtle gradient overlay */}
+            <div 
+              className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"
+              style={{
+                clipPath: 'polygon(0 0, 100% 0, 60% 100%, 0 100%)',
+              }}
             />
           </div>
         </div>

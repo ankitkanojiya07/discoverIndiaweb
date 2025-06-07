@@ -15,7 +15,7 @@ const destinationsData = {
       },
       {
         name: 'Kerala',
-        image: 'https://images.pexels.com/photos/1310740/pexels-photo-1310740.jpeg',
+        image: 'https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg',
         description: 'God\'s own country with backwaters and spice plantations.',
         highlights: ['Kochi', 'Munnar', 'Alleppey', 'Thekkady']
       },
@@ -39,7 +39,7 @@ const destinationsData = {
       },
       {
         name: 'Tamil Nadu',
-        image: 'https://images.pexels.com/photos/3581349/pexels-photo-3581349.jpeg',
+        image: 'https://images.pexels.com/photos/2310360/pexels-photo-2310360.jpeg',
         description: 'Temple state with Dravidian architecture and classical arts.',
         highlights: ['Chennai', 'Madurai', 'Thanjavur', 'Mahabalipuram']
       }

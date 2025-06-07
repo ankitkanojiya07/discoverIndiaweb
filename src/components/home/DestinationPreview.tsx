@@ -28,7 +28,7 @@ const destinations: Destination[] = [
   {
     id: 3,
     name: 'Bhutan',
-    image: 'https://images.pexels.com/photos/5282557/pexels-photo-5282557.jpeg',
+    image: 'https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg',
     description: 'Explore the Last Shangri-La with pristine nature, Buddhist culture, and the philosophy of Gross National Happiness.',
     link: '/destinations',
   },

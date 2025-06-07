@@ -55,25 +55,25 @@ const Testimonials: React.FC = () => {
             {testimonials.map((testimonial, index) => (
               <div 
                 key={testimonial.id}
-                className={`transition-opacity duration-500 ${index === current ? 'opacity-100' : 'opacity-0 absolute top-0 left-0'}`}
+                className={`transition-opacity duration-500 ${index === current ? 'opacity-100' : 'opacity-0 absolute top-0 left-0 w-full'}`}
               >
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                  <div className="order-2 md:order-1">
-                    <Quote size={48} className="text-primary-300 mb-4" />
-                    <blockquote className="font-serif text-xl text-primary-900 italic mb-6 leading-relaxed">
-                      "{testimonial.quote}"
-                    </blockquote>
-                    <div>
+                <div className="max-w-2xl mx-auto text-center">
+                  <Quote size={40} className="text-primary-300 mb-4 mx-auto" />
+                  <blockquote className="font-serif text-lg md:text-xl text-primary-900 italic mb-8 leading-relaxed">
+                    "{testimonial.quote}"
+                  </blockquote>
+                  <div className="flex items-center justify-center space-x-4">
+                    <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-primary-100">
+                      <img 
+                        src={testimonial.image} 
+                        alt={testimonial.author}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="text-left">
                       <div className="font-medium text-primary-900">{testimonial.author}</div>
                       <div className="text-primary-600 text-sm">{testimonial.location}</div>
                     </div>
-                  </div>
-                  <div className="order-1 md:order-2">
-                    <img 
-                      src={testimonial.image} 
-                      alt={testimonial.author}
-                      className="w-full h-80 object-cover"
-                    />
                   </div>
                 </div>
               </div>
@@ -83,17 +83,17 @@ const Testimonials: React.FC = () => {
           <div className="flex justify-center mt-12">
             <button
               onClick={prev}
-              className="mr-4 w-12 h-12 flex items-center justify-center border border-primary-300 text-primary-900 hover:bg-primary-100 transition-colors"
+              className="mr-4 w-10 h-10 rounded-full flex items-center justify-center border border-primary-300 text-primary-900 hover:bg-primary-100 transition-all hover:scale-105"
               aria-label="Previous testimonial"
             >
-              <ChevronLeft size={20} />
+              <ChevronLeft size={18} />
             </button>
             <button
               onClick={next}
-              className="w-12 h-12 flex items-center justify-center border border-primary-300 text-primary-900 hover:bg-primary-100 transition-colors"
+              className="w-10 h-10 rounded-full flex items-center justify-center border border-primary-300 text-primary-900 hover:bg-primary-100 transition-all hover:scale-105"
               aria-label="Next testimonial"
             >
-              <ChevronRight size={20} />
+              <ChevronRight size={18} />
             </button>
           </div>
         </div>

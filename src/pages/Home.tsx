@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from '../components/home/Hero';
 import BigScreen from '../components/home/BigScreen';
+import AboutUs from '../components/home/AboutUs';
 import DestinationPreview from '../components/home/DestinationPreview';
 import ExperiencePreview from '../components/home/ExperiencePreview';
 import GalleryPreview from '../components/home/GalleryPreview';
@@ -12,6 +13,7 @@ const Home: React.FC = () => {
   return (
     <>
       <Hero />
+      <AboutUs />
       <DestinationPreview />
       <ExperiencePreview />
       <GalleryPreview />

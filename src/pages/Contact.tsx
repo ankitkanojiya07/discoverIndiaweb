@@ -80,26 +80,26 @@ const Contact: React.FC = () => {
                 </form>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="flex items-start">
-                  <MapPin size={20} className="mr-3 text-primary-800" />
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="flex items-start bg-white/50 p-4 rounded-lg">
+                  <MapPin size={20} className="mr-3 text-primary-800 flex-shrink-0" />
                   <div>
                     <h4 className="font-medium text-primary-900 mb-1">Address</h4>
                     <p className="text-sm text-primary-700">42 Cultural Street, New Delhi, 110001, India</p>
                   </div>
                 </div>
-                <div className="flex items-start">
-                  <Phone size={20} className="mr-3 text-primary-800" />
+                <div className="flex items-start bg-white/50 p-4 rounded-lg">
+                  <Phone size={20} className="mr-3 text-primary-800 flex-shrink-0" />
                   <div>
                     <h4 className="font-medium text-primary-900 mb-1">Phone</h4>
                     <p className="text-sm text-primary-700">+91 98765 43210</p>
                   </div>
                 </div>
-                <div className="flex items-start">
-                  <Mail size={20} className="mr-3 text-primary-800" />
-                  <div>
+                <div className="flex items-start bg-white/50 p-4 rounded-lg">
+                  <Mail size={20} className="mr-3 text-primary-800 flex-shrink-0" />
+                  <div className="min-w-0">
                     <h4 className="font-medium text-primary-900 mb-1">Email</h4>
-                    <p className="text-sm text-primary-700">info@discovercultureindia.com</p>
+                    <p className="text-sm text-primary-700 break-words">info@discovercultureindia.com</p>
                   </div>
                 </div>
               </div>
