@@ -1,0 +1,93 @@
+import React from 'react';
+
+const Contact: React.FC = () => {
+  return (
+    <section className="py-24 bg-accent-50">
+      <div className="container-custom">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="slide-up">
+            <h2 className="section-subtitle">Begin Your Journey</h2>
+            <h3 className="section-title">Plan Your Cultural Experience</h3>
+            <p className="text-primary-700 mt-4 mb-8 leading-relaxed">
+              Our travel designers are ready to craft a personalized journey that 
+              aligns with your interests, preferences, and schedule. Contact us to 
+              begin planning your immersive cultural experience in India.
+            </p>
+            
+            <div className="bg-white p-8 border border-primary-200">
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-primary-900 mb-1">
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      className="w-full border-b border-primary-300 py-2 focus:border-accent-600 focus:outline-none bg-transparent"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-primary-900 mb-1">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      className="w-full border-b border-primary-300 py-2 focus:border-accent-600 focus:outline-none bg-transparent"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label htmlFor="interest" className="block text-sm font-medium text-primary-900 mb-1">
+                    Area of Interest
+                  </label>
+                  <select
+                    id="interest"
+                    className="w-full border-b border-primary-300 py-2 focus:border-accent-600 focus:outline-none bg-transparent"
+                  >
+                    <option value="">Select an option</option>
+                    <option value="heritage">Heritage & Architecture</option>
+                    <option value="spiritual">Spiritual Journeys</option>
+                    <option value="culinary">Culinary Experiences</option>
+                    <option value="crafts">Arts & Crafts</option>
+                    <option value="custom">Custom Experience</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-primary-900 mb-1">
+                    Your Message
+                  </label>
+                  <textarea
+                    id="message"
+                    rows={4}
+                    className="w-full border-b border-primary-300 py-2 focus:border-accent-600 focus:outline-none bg-transparent"
+                  ></textarea>
+                </div>
+                
+                <button
+                  type="submit"
+                  className="w-full bg-primary-900 text-white py-3 uppercase tracking-wider text-sm hover:bg-primary-800 transition-colors"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+          
+          <div className="fade-in">
+            <img
+              src="https://images.pexels.com/photos/16052723/pexels-photo-16052723.jpeg"
+              alt="Luxury cultural experience"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
