@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { ArrowRight, MapPin } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { MapPin } from 'lucide-react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const destinationsData = {
   india: {
@@ -110,7 +111,24 @@ const destinationsData = {
 };
 
 const Destinations: React.FC = () => {
-  const [selectedDestination, setSelectedDestination] = useState<string | null>(null);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [activeCountry, setActiveCountry] = useState<string | null>(null);
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const country = params.get('country');
+    if (country && Object.keys(destinationsData).includes(country)) {
+      setActiveCountry(country);
+      // Scroll to the country section
+      setTimeout(() => {
+        const element = document.getElementById(`country-${country}`);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+  }, [location]);
 
   return (
     <div className="pt-24">
@@ -125,52 +143,50 @@ const Destinations: React.FC = () => {
             </p>
           </div>
 
-          {!selectedDestination ? (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {Object.entries(destinationsData).map(([key, destination]) => (
-                <div 
-                  key={key} 
-                  className="group cursor-pointer"
-                  onClick={() => setSelectedDestination(key)}
-                >
-                  <div className="relative h-[400px] overflow-hidden mb-6">
-                    <img
-                      src={destination.image}
-                      alt={destination.name}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-8">
-                      <h3 className="font-serif text-3xl text-white mb-2">{destination.name}</h3>
-                      <p className="text-white/90 mb-4">{destination.description}</p>
-                      <div className="flex items-center text-white">
-                        <span className="text-sm uppercase tracking-wider">Explore</span>
-                        <ArrowRight size={16} className="ml-2" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div>
-              <div className="mb-8">
-                <button
-                  onClick={() => setSelectedDestination(null)}
-                  className="flex items-center text-primary-900 hover:text-accent-700 transition-colors mb-4"
-                >
-                  ← Back to Destinations
-                </button>
+          {/* Navigation buttons */}
+          <div className="flex justify-center gap-4 mb-16">
+            {Object.entries(destinationsData).map(([key, destination]) => (
+              <button
+                key={key}
+                onClick={() => {
+                  setActiveCountry(key);
+                  navigate(`/destinations?country=${key}`, { replace: true });
+                  const element = document.getElementById(`country-${key}`);
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }}
+                className={`px-6 py-3 rounded-lg transition-all ${
+                  activeCountry === key
+                    ? 'bg-accent-600 text-white'
+                    : 'bg-white text-primary-900 hover:bg-primary-100'
+                }`}
+              >
+                {destination.name}
+              </button>
+            ))}
+          </div>
+
+          {/* Country sections */}
+          {Object.entries(destinationsData).map(([key, destination]) => (
+            <div
+              key={key}
+              id={`country-${key}`}
+              className={`mb-24 transition-opacity duration-500 ${
+                activeCountry && activeCountry !== key ? 'opacity-50' : 'opacity-100'
+              }`}
+            >
+              <div className="mb-12">
                 <h2 className="font-serif text-4xl text-primary-950 mb-4">
-                  {destinationsData[selectedDestination as keyof typeof destinationsData].name}
+                  {destination.name}
                 </h2>
-                <p className="text-primary-700 text-lg">
-                  {destinationsData[selectedDestination as keyof typeof destinationsData].description}
+                <p className="text-primary-700 text-lg max-w-4xl">
+                  {destination.description}
                 </p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {destinationsData[selectedDestination as keyof typeof destinationsData].places.map((place, index) => (
+                {destination.places.map((place, index) => (
                   <div key={index} className="bg-white group">
                     <div className="relative overflow-hidden">
                       <img
@@ -205,7 +221,7 @@ const Destinations: React.FC = () => {
                 ))}
               </div>
             </div>
-          )}
+          ))}
         </div>
       </section>
     </div>

@@ -157,17 +157,17 @@ const About: React.FC = () => {
                 <h4 className="font-serif text-2xl mb-8 text-primary-950 text-center">Our Certificates</h4>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
                   <img 
-                    src="/c.jpg" 
+                    src="./cert.avif" 
                     alt="Tourism Certificate"
                     className="w-full h-48 object-contain bg-primary-50/50 p-4 rounded-lg hover:shadow-md transition-shadow"
                   />
                   <img 
-                    src="/c1.jpg" 
+                    src="./cert1.avif" 
                     alt="Travel Agency Certificate"
                     className="w-full h-48 object-contain bg-primary-50/50 p-4 rounded-lg hover:shadow-md transition-shadow"
                   />
                   <img 
-                    src="/8.jpg" 
+                    src="./cert.avif" 
                     alt="Professional License"
                     className="w-full h-48 object-contain bg-primary-50/50 p-4 rounded-lg hover:shadow-md transition-shadow"
                   />

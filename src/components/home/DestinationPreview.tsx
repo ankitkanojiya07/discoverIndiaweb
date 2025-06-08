@@ -14,7 +14,7 @@ const destinations: Destination[] = [
   {
     id: 1,
     name: 'India',
-    image: 'https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg',
+    image: './te.jpg',
     description: 'Experience the incredible diversity of India, from ancient temples to royal palaces and spiritual traditions.',
     link: '/destinations',
   },

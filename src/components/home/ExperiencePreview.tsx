@@ -15,7 +15,7 @@ const experiences: Experience[] = [
     id: 1,
     title: 'Royal Heritage Tour',
     category: 'India',
-    image: 'https://images.pexels.com/photos/3581349/pexels-photo-3581349.jpeg',
+    image: 'https://images.pexels.com/photos/592172/pexels-photo-592172.jpeg',
     description: 'Journey through time as you explore ancient palaces and forts with expert historians.',
     country: 'India'
   },

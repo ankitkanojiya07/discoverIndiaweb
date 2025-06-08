@@ -10,24 +10,25 @@ interface Slide {
 }
 
 const slides: Slide[] = [
-  // {
-  //   id: 1,
-  //   image: 'https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg',
-  //   title: 'Experience the Soul of India',
-  //   subtitle: 'Immersive cultural journeys through ancient traditions',
-  // },
+  {
+    id: 1,
+    image: './h11.jpg',
+    title: 'Experience the Soul of India',
+    subtitle: 'Immersive cultural journeys through ancient traditions',
+  },
   {
     id: 2,
     image: './h1.jpg',
-    title: 'Enough for your city life It is time to travel',
-    subtitle: '',
+    title: 'It is time to travel',
+    subtitle: 'Discover new destinations and create unforgettable memories',
   },
-  // {
-  //   id: 3,
-  //   image: 'https://images.pexels.com/photos/5282557/pexels-photo-5282557.jpeg',
-  //   title: 'Authentic Cultural Connections',
-  //   subtitle: 'Engage with local communities and age-old traditions',
-  // },
+  {
+    id: 3,
+    image: './h12.jpg',
+    title: 'Authentic Cultural Connections',
+    subtitle: 'Engage with local communities and age-old traditions',
+  }
+  
 ];
 
 const Hero: React.FC = () => {
@@ -51,7 +52,8 @@ const Hero: React.FC = () => {
           style={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${slide.image})`,
             backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundPosition: 'center top',
+            backgroundRepeat: 'no-repeat'
           }}
         />
       ))}

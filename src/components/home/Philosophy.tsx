@@ -12,10 +12,7 @@ const Philosophy: React.FC = () => {
               Authentic Cultural Immersion with Uncompromising Luxury
             </h3>
             <p className="text-primary-200 mb-6 leading-relaxed">
-              At Discover Culture India, we believe that true luxury lies in authentic experiences. 
-              Our approach harmoniously blends cultural immersion with refined comfort, allowing 
-              you to connect deeply with India's heritage while enjoying the highest standards of 
-              hospitality.
+            We are Discover Culture India, a 32-year-old travel company with a deep and abiding love for the outdoors, cultural diversity and adventurous activities; and we welcome you to be a part of our journey. Since 1990, contributing to the local economy through cultural tours has been our main focus. Safety, comfort and a unique local experience has always been on the top of our priority list.
             </p>
             <p className="text-primary-200 mb-8 leading-relaxed">
               Each journey is thoughtfully crafted to provide intimate access to cultural treasures 

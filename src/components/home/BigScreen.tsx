@@ -31,13 +31,12 @@ const StatItem: React.FC<{ stat: typeof stats[0]; delay: number }> = ({ stat, de
 		suffix: stat.suffix,
 		delay
 	});
-
 	return (
 		<div className="text-center" ref={ref}>
-			<div className="text-4xl font-bold text-gray-900 mb-2">
+			<div className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">
 				{count}
 			</div>
-			<div className="text-sm text-gray-600">{stat.label}</div>
+			<div className="text-xs md:text-sm text-gray-600">{stat.label}</div>
 		</div>
 	);
 };
@@ -78,9 +77,8 @@ const BigScreen: React.FC = () => {
 			</div>
 
 			{/* Stats - Positioned at bottom */}
-			<div className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 z-20">
-				<div className="container-custom">
-					<div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto bg-white shadow-xl rounded-2xl p-8">
+			<div className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 z-20">				<div className="container-custom">
+					<div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-3xl mx-auto bg-white shadow-lg rounded-xl p-6 border-2 border-black">
 						{stats.map((stat, index) => (
 							<StatItem key={index} stat={stat} delay={index * 200} />
 						))}
