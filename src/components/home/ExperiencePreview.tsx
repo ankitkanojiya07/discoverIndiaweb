@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 interface Experience {
   id: number;
@@ -13,35 +13,39 @@ interface Experience {
 const experiences: Experience[] = [
   {
     id: 1,
-    title: 'Royal Heritage Tour',
-    category: 'India',
-    image: 'https://images.pexels.com/photos/592172/pexels-photo-592172.jpeg',
-    description: 'Journey through time as you explore ancient palaces and forts with expert historians.',
-    country: 'India'
+    title: "Royal Heritage Tour",
+    category: "India",
+    image: "./9.jpg",
+    description:
+      "Journey through time as you explore ancient palaces and forts with expert historians.",
+    country: "India",
   },
   {
     id: 2,
-    title: 'Himalayan Buddhist Pilgrimage',
-    category: 'Nepal',
-    image: 'https://images.pexels.com/photos/2161467/pexels-photo-2161467.jpeg',
-    description: 'Visit ancient monasteries and participate in Buddhist ceremonies in the Himalayas.',
-    country: 'Nepal'
+    title: "Himalayan Buddhist Pilgrimage",
+    category: "Nepal",
+    image: "./7.jpg",
+    description:
+      "Visit ancient monasteries and participate in Buddhist ceremonies in the Himalayas.",
+    country: "Nepal",
   },
   {
     id: 3,
-    title: 'Tiger\'s Nest Spiritual Journey',
-    category: 'Bhutan',
-    image: 'https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg',
-    description: 'Hike to the iconic monastery and experience Bhutanese Buddhist traditions.',
-    country: 'Bhutan'
+    title: "Tiger's Nest Spiritual Journey",
+    category: "Bhutan",
+    image: "./6.jpg",
+    description:
+      "Hike to the iconic monastery and experience Bhutanese Buddhist traditions.",
+    country: "Bhutan",
   },
   {
     id: 4,
-    title: 'Artisan Workshops',
-    category: 'India',
-    image: 'https://images.pexels.com/photos/2499699/pexels-photo-2499699.jpeg',
-    description: 'Learn traditional crafts directly from master artisans in their ancestral workshops.',
-    country: 'India'
+    title: "Artisan Workshops",
+    category: "India",
+    image: "./5.jpg",
+    description:
+      "Learn traditional crafts directly from master artisans in their ancestral workshops.",
+    country: "India",
   },
 ];
 
@@ -53,14 +57,15 @@ const ExperiencePreview: React.FC = () => {
           <h2 className="section-subtitle">Cultural Experiences</h2>
           <h3 className="section-title">Immersive Cultural Journeys</h3>
           <p className="text-primary-700 mt-4 leading-relaxed">
-            Our carefully curated experiences connect you with the living heritage of India, Nepal, and Bhutan,
-            providing authentic encounters with traditions that have thrived for centuries.
+            Our carefully curated experiences connect you with the living
+            heritage of India, Nepal, and Bhutan, providing authentic encounters
+            with traditions that have thrived for centuries.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {experiences.map((experience, index) => (
-            <div 
+            <div
               key={experience.id}
               className="bg-white group slide-up"
               style={{ animationDelay: `${0.15 * (index + 1)}s` }}
@@ -94,10 +99,7 @@ const ExperiencePreview: React.FC = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Link 
-            to="/experiences" 
-            className="btn-primary inline-block"
-          >
+          <Link to="/experiences" className="btn-primary inline-block">
             Explore All Experiences
           </Link>
         </div>

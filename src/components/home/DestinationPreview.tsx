@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 interface Destination {
   id: number;
@@ -13,24 +13,27 @@ interface Destination {
 const destinations: Destination[] = [
   {
     id: 1,
-    name: 'India',
-    image: './te.jpg',
-    description: 'Experience the incredible diversity of India, from ancient temples to royal palaces and spiritual traditions.',
-    link: '/destinations',
+    name: "India",
+    image: "./te.jpg",
+    description:
+      "Experience the incredible diversity of India, from ancient temples to royal palaces and spiritual traditions.",
+    link: "/destinations",
   },
   {
     id: 2,
-    name: 'Nepal',
-    image: 'https://images.pexels.com/photos/5282269/pexels-photo-5282269.jpeg',
-    description: 'Discover the Himalayan kingdom with its ancient temples, mountain adventures, and Buddhist heritage.',
-    link: '/destinations',
+    name: "Nepal",
+    image: "./3.jpg",
+    description:
+      "Discover the Himalayan kingdom with its ancient temples, mountain adventures, and Buddhist heritage.",
+    link: "/destinations",
   },
   {
     id: 3,
-    name: 'Bhutan',
-    image: 'https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg',
-    description: 'Explore the Last Shangri-La with pristine nature, Buddhist culture, and the philosophy of Gross National Happiness.',
-    link: '/destinations',
+    name: "Bhutan",
+    image: "./4.jpg",
+    description:
+      "Explore the Last Shangri-La with pristine nature, Buddhist culture, and the philosophy of Gross National Happiness.",
+    link: "/destinations",
   },
 ];
 
@@ -42,15 +45,17 @@ const DestinationPreview: React.FC = () => {
           <h2 className="section-subtitle">Curated Destinations</h2>
           <h3 className="section-title">Where Heritage Meets Luxury</h3>
           <p className="text-primary-700 mt-4 leading-relaxed">
-            Each destination offers a unique lens into the rich cultural tapestry of the Himalayas 
-            and Indian subcontinent, carefully selected to provide authentic experiences with uncompromising comfort.
+            Each destination offers a unique lens into the rich cultural
+            tapestry of the Himalayas and Indian subcontinent, carefully
+            selected to provide authentic experiences with uncompromising
+            comfort.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {destinations.map((destination, index) => (
-            <div 
-              key={destination.id} 
+            <div
+              key={destination.id}
               className="group overflow-hidden slide-up"
               style={{ animationDelay: `${0.2 * (index + 1)}s` }}
             >
@@ -62,13 +67,17 @@ const DestinationPreview: React.FC = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-950/70 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="font-serif text-2xl text-white mb-2">{destination.name}</h3>
+                  <h3 className="font-serif text-2xl text-white mb-2">
+                    {destination.name}
+                  </h3>
                 </div>
               </div>
               <div className="p-6 bg-white border border-primary-100">
-                <p className="text-primary-700 mb-4">{destination.description}</p>
-                <Link 
-                  to={destination.link} 
+                <p className="text-primary-700 mb-4">
+                  {destination.description}
+                </p>
+                <Link
+                  to={destination.link}
                   className="inline-flex items-center text-sm uppercase tracking-wider text-primary-900 hover:text-accent-700 transition-colors font-medium"
                 >
                   Explore More
@@ -80,10 +89,7 @@ const DestinationPreview: React.FC = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Link 
-            to="/destinations" 
-            className="btn-primary inline-block"
-          >
+          <Link to="/destinations" className="btn-primary inline-block">
             View All Destinations
           </Link>
         </div>
