@@ -134,7 +134,7 @@ const Contact: React.FC = () => {
 
             <div>
               <img
-                src="./map.jpg"
+                src="./23.jpg"
                 alt="Luxury cultural experience"
                 className="w-full h-[600px] object-cover"
               />

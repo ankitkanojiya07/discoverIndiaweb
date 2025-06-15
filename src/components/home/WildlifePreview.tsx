@@ -16,10 +16,10 @@ interface WildlifeSafari {
 const wildlifeSafaris: WildlifeSafari[] = [
   {
     id: 1,
-    title: "Ranthambore Tiger Safari",
+    title: "Ranthambore National Park",
     location: "Rajasthan",
     country: "India",
-    image: "https://images.pexels.com/photos/247566/pexels-photo-247566.jpeg",
+    image: "./42.jpg",
     keySpecies: ["Bengal Tiger", "Leopard", "Sloth Bear"],
     bestSeason: "October to June",
     description:
@@ -27,25 +27,25 @@ const wildlifeSafaris: WildlifeSafari[] = [
   },
   {
     id: 2,
-    title: "Chitwan National Park",
-    location: "Terai",
-    country: "Nepal",
-    image: "https://images.pexels.com/photos/1054655/pexels-photo-1054655.jpeg",
-    keySpecies: ["One-horned Rhino", "Bengal Tiger", "Asian Elephant"],
-    bestSeason: "October to March",
+    title: "Bandhavgarh National Park",
+    location: "Madhya Pradesh",
+    country: "India",
+    image: "./35.jpg",
+    keySpecies: ["Bengal Tiger", "White Tiger", "Leopard"],
+    bestSeason: "October to June",
     description:
-      "Discover Nepal's first national park, home to the endangered one-horned rhinoceros and diverse wildlife.",
+      "Known for having one of the highest densities of tigers in the world, offering excellent opportunities for tiger sightings.",
   },
   {
     id: 3,
-    title: "Manas Wildlife Sanctuary",
-    location: "Assam",
+    title: "Jim Corbett National Park",
+    location: "Uttarakhand",
     country: "India",
-    image: "https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg",
-    keySpecies: ["Golden Langur", "Red Panda", "Clouded Leopard"],
-    bestSeason: "November to April",
+    image: "./43.jpg",
+    keySpecies: ["Bengal Tiger", "Asian Elephant", "Himalayan Black Bear"],
+    bestSeason: "November to June",
     description:
-      "Visit this UNESCO World Heritage site that spans the border between India and Bhutan, known for its exceptional biodiversity.",
+      "India's oldest national park offers diverse habitats from hills to riverine belts, supporting a wide range of wildlife.",
   },
 ];
 
