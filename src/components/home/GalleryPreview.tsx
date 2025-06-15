@@ -1,27 +1,27 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const GalleryPreview: React.FC = () => {
   const previewImages = [
     {
       id: 1,
-      image: './h2.jpg',
-      title: 'Mountain',
-      category: 'Nature'
+      image: "./19.jpg",
+      title: "Desert",
+      category: "Nature",
     },
     {
       id: 2,
-      image: 'https://images.pexels.com/photos/6143369/pexels-photo-6143369.jpeg',
-      title: 'Beach',
-      category: 'Island'
+      image: "./24.jpg",
+      title: "Taj Mahal",
+      category: "Historic",
     },
     {
       id: 3,
-      image: './8.jpg',
-      title: 'Legacy',
-      category: 'wildlife'
-    }
+      image: "./8.jpg",
+      title: "Legacy",
+      category: "wildlife",
+    },
   ];
 
   return (
@@ -33,7 +33,8 @@ const GalleryPreview: React.FC = () => {
             Curated Off-The-Beaten-Path Experiences
           </h3>
           <p className="text-gray-600 mb-8">
-            Discover our collection of breathtaking destinations and unforgettable moments
+            Discover our collection of breathtaking destinations and
+            unforgettable moments
           </p>
         </div>
 
@@ -49,9 +50,7 @@ const GalleryPreview: React.FC = () => {
                 <span className="text-white/70 text-sm uppercase tracking-wider">
                   {item.category}
                 </span>
-                <h4 className="text-white text-xl font-serif">
-                  {item.title}
-                </h4>
+                <h4 className="text-white text-xl font-serif">{item.title}</h4>
               </div>
             </div>
           ))}

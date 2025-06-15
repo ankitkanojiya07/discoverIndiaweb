@@ -14,20 +14,19 @@ const Philosophy: React.FC = () => {
               Authentic Cultural Immersion with Uncompromising Luxury
             </h3>
             <p className="text-primary-200 mb-6 leading-relaxed">
-              We are Discover Culture India, a 32-year-old travel company with a
+              We are Discover Culture India, a 42-year-old travel company with a
               deep and abiding love for the outdoors, cultural diversity and
               adventurous activities; and we welcome you to be a part of our
-              journey. Since 1990, contributing to the local economy through
+              journey. Since 1983, contributing to the local economy through
               cultural tours has been our main focus. Safety, comfort and a
               unique local experience has always been on the top of our priority
               list.
             </p>
             <p className="text-primary-200 mb-8 leading-relaxed">
-              Each journey is thoughtfully crafted to provide intimate access to
-              cultural treasures while maintaining respect for local communities
-              and traditions. We work closely with local experts, artisans, and
-              communities to ensure that your experience is both authentic and
-              sustainable.
+              Our mission is to provide high-quality, prodigious, safe and a
+              memorable experience to our customers. We have been recognised,
+              approved and licensed by The Ministry of Tourism, Government of
+              India and various other travel and tourism associations of India.
             </p>
             <Link
               to="/about"

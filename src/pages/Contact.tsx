@@ -1,5 +1,5 @@
-import React from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import React from "react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const Contact: React.FC = () => {
   return (
@@ -10,9 +10,9 @@ const Contact: React.FC = () => {
             <h1 className="section-subtitle">Connect</h1>
             <h2 className="section-title">Plan Your Journey</h2>
             <p className="text-primary-700 mt-4 leading-relaxed">
-              Our travel designers are ready to craft a personalized journey that aligns 
-              with your interests and preferences. Contact us to begin planning your 
-              immersive cultural experience in India.
+              Our travel designers are ready to craft a personalized journey
+              that aligns with your interests and preferences. Contact us to
+              begin planning your immersive cultural experience in India.
             </p>
           </div>
 
@@ -22,7 +22,10 @@ const Contact: React.FC = () => {
                 <form className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-primary-900 mb-1">
+                      <label
+                        htmlFor="name"
+                        className="block text-sm font-medium text-primary-900 mb-1"
+                      >
                         Name
                       </label>
                       <input
@@ -32,7 +35,10 @@ const Contact: React.FC = () => {
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-primary-900 mb-1">
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-medium text-primary-900 mb-1"
+                      >
                         Email
                       </label>
                       <input
@@ -44,7 +50,10 @@ const Contact: React.FC = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="interest" className="block text-sm font-medium text-primary-900 mb-1">
+                    <label
+                      htmlFor="interest"
+                      className="block text-sm font-medium text-primary-900 mb-1"
+                    >
                       Area of Interest
                     </label>
                     <select
@@ -61,7 +70,10 @@ const Contact: React.FC = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-primary-900 mb-1">
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium text-primary-900 mb-1"
+                    >
                       Your Message
                     </label>
                     <textarea
@@ -82,24 +94,39 @@ const Contact: React.FC = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div className="flex items-start bg-white/50 p-4 rounded-lg">
-                  <MapPin size={20} className="mr-3 text-primary-800 flex-shrink-0" />
+                  <MapPin
+                    size={20}
+                    className="mr-3 text-primary-800 flex-shrink-0"
+                  />
                   <div>
-                    <h4 className="font-medium text-primary-900 mb-1">Address</h4>
-                    <p className="text-sm text-primary-700">42 Cultural Street, New Delhi, 110001, India</p>
+                    <h4 className="font-medium text-primary-900 mb-1">
+                      Address
+                    </h4>
+                    <p className="text-sm text-primary-700">
+                      42 Cultural Street, New Delhi, 110001, India
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start bg-white/50 p-4 rounded-lg">
-                  <Phone size={20} className="mr-3 text-primary-800 flex-shrink-0" />
+                  <Phone
+                    size={20}
+                    className="mr-3 text-primary-800 flex-shrink-0"
+                  />
                   <div>
                     <h4 className="font-medium text-primary-900 mb-1">Phone</h4>
                     <p className="text-sm text-primary-700">+91 98765 43210</p>
                   </div>
                 </div>
                 <div className="flex items-start bg-white/50 p-4 rounded-lg">
-                  <Mail size={20} className="mr-3 text-primary-800 flex-shrink-0" />
+                  <Mail
+                    size={20}
+                    className="mr-3 text-primary-800 flex-shrink-0"
+                  />
                   <div className="min-w-0">
                     <h4 className="font-medium text-primary-900 mb-1">Email</h4>
-                    <p className="text-sm text-primary-700 break-words">info@discovercultureindia.com</p>
+                    <p className="text-sm text-primary-700 break-words">
+                      info@discovercultureindia.com
+                    </p>
                   </div>
                 </div>
               </div>
@@ -107,7 +134,7 @@ const Contact: React.FC = () => {
 
             <div>
               <img
-                src="https://images.pexels.com/photos/5282269/pexels-photo-5282269.jpeg"
+                src="./map.jpg"
                 alt="Luxury cultural experience"
                 className="w-full h-[600px] object-cover"
               />

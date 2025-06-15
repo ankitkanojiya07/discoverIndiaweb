@@ -51,7 +51,7 @@ const BigScreen: React.FC = () => {
         className="fixed inset-0 w-full"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg)",
+            "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./2.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           zIndex: -1,
